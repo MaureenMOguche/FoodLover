@@ -1,0 +1,221 @@
+:root{
+    --highlight: #e58f00;
+    --dark-bg: rgb(27, 26, 26);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+/* ================================
+            General
+================================ */
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+body{
+    color: white;
+}
+section{
+    min-height: 100vh;
+}
+
+.content-box-md{
+    padding: 120px;
+}
+
+/* ================================
+            Buttons
+================================ */
+.btn-general{
+    padding: 12px 12px;
+    border-radius: 12px;
+    color: white;
+}
+.btn-home {
+    background-color: var(--highlight);
+}
+
+/* ================================
+            Home
+================================ */
+#home{
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../images/hero-bg.png");
+}
+.home-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-text h1 {
+    color: var(--highlight);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+/* ================================
+            About
+================================ */
+#about{
+    background-color: var(--dark-bg);
+}
+.about-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* ================================
+            Quality
+================================ */
+#quality-food{
+    background-color: var(--dark-bg);
+}
+.quality-shape-container{
+    padding: 120px 0;
+    position: relative;
+}
+.quality-sideplate{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.shape-text{
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    font-size: larger;
+    font-weight: bolder;
+}
+.shape-plate{
+    position: absolute;
+    top: 800px;
+    right: 0;
+}
+.belowshape-plate{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+
+/* ================================
+            Enjoy
+================================ */
+#enjoy {
+    background-image: url("../images/enjoy-food-bg.png");
+}
+.enjoy-container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.enjoy-text{
+    width: 50%;
+    height: 60%;
+    border: 10px solid var(--highlight);
+    padding: 30px 40px;
+    
+}
+
+/* ================================
+            Our Menu
+================================ */
+.menu-text {
+    width: 100%;
+    padding-top: 10px;
+}
+.menu-text h5,
+.menu-text p{
+    letter-spacing: 2px;
+}
+.menu-text h5 {
+    color: var(--highlight);
+}
+
+
+/* ================================
+            Footer
+================================ */
+footer{
+    height: 100vh;
+}
+.footer-top{
+    background-color: var(--highlight);
+    height: 50%;
+}
+.footer-img{
+    position: relative;
+    height: 70vh;
+}
+.footer-img img{
+    position: absolute;
+    height: 100%;
+    top: -10vh;
+}
+.footer-bottom .container {
+    margin-top: 100px;
+}
+
+
+
+
+
+/* ================================
+            Mobile
+================================ */
+@media (max-width: 600px) {
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    .content-box-md {
+        padding: 20px;
+    }
+    .quality-sideplate,
+    .shape-plate{
+        display: none;
+    }
+    .belowshape-plate{
+        width: 90%;
+        margin: auto;
+    }
+    .shape-text{
+        width: 80%;
+    }
+    .enjoy-text{
+        background-color: var(--dark-bg);
+        width: 80%;
+    }
+    .footer-img{
+        height: 20vh;
+    }
+    .footer-img img{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* navigation */
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-toggler{
+        position: fixed;
+        right: 20px;
+        top: 15px;
+    }
+    #main-nav div{
+        text-align: center;
+    }
+    .my-right-nav{
+        display: block;
+        text-align: center;
+    }
+}
